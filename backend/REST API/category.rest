@@ -1,0 +1,36 @@
+@categoryId =65b0ca38d6ade8af170659d8
+
+@categoryLabel=Business
+
+### Get All Categories
+GET {{host}}/api/categories
+
+### Create Category
+POST {{host}}/api/categories
+Content-Type: application/json
+
+{
+  "label": "Science 1",
+  "value": "Science 1"
+}
+
+### Update Category by ID
+PUT {{host}}/api/categories/{{categoryId}}
+Content-Type: application/json
+
+{
+  "label": "Testing",
+  "value": "testing-category"
+}
+
+### Delete Category by Id
+DELETE {{host}}/api/categories/{{categoryId}}
+
+### Get Categorized Articles
+GET {{host}}/api/categories/{{categoryId}}/articles
+
+### Get Categorized Articles By Label
+GET {{host}}/api/categories/by-label/{{categoryLabel}}/articles
+
+### Get categories-with-articles
+GET {{host}}/api/categories/categories-with-articles

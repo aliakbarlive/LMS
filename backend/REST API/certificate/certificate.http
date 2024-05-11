@@ -1,0 +1,13 @@
+# get All certificate api
+###
+GET {{host}}/api/certificate
+
+
+# Add Ceritificate
+###
+POST {{host}}/api/certificate
+Content-Type: application/json
+
+{
+    "name":"Certificate 1"
+}

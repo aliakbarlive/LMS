@@ -1,0 +1,45 @@
+
+
+
+# Get Cart Items
+# Status Code
+#   200=> OK
+GET {{host}}/api/cart/items
+
+
+
+# Add item to Cart
+# Status Code
+#   400=> Course already in the cart.
+#   200=> success Fully Added
+###
+POST {{host}}/api/cart/add
+Content-Type: application/json
+
+{
+  "courseId": "65984423ec92281f4cffeb9a"
+}
+
+
+# Update Cart Item
+###
+PUT {{host}}/api/cart/update/your_course_id
+Content-Type: application/json
+
+{
+  "quantity": 3
+}
+
+# Delete single Cart Item
+# Status Code
+#    200=>  Deleted
+#    404 => Cart Item Not Found
+###
+DELETE {{host}}/api/cart/delete/cart_item_id
+
+
+# Clear Cart
+# Status Code
+#    200=>  cleared
+###
+DELETE {{host}}/api/cart/clear

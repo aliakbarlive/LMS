@@ -1,0 +1,39 @@
+
+
+# get All course api
+###
+GET {{host}}/api/course
+
+
+# get course by id
+###
+GET {{host}}/api/course/6582c1b44596a993c18ad01f
+
+
+# get related courese
+###
+GET {{host}}/api/course/related/658ad04f4c2ccd8310760fb6?random=true&limit=5
+
+# get course with pagination
+###
+GET {{host}}/api/course/all?page=1
+
+# Create new Course
+###
+POST {{host}}/api/course
+Content-Type: application/json
+
+{
+  "title": "Art History: Renaissance to Modern Era",
+  "topic": "Art History",
+  "duration": "21",
+  "price":500,
+  "modality": "Online",
+  "image":"https://lms.rocket-soft.org/store/1015/The%20Professional%20Guitar%20Masterclass.jpg",
+  "pageContent": {
+    "postTitle": "sit voluptatem accusantium doloremque",
+    "videoUrl": "https://www.youtube.com/watch?v=MpLaDn82FtI&ab_channel=SongMusic",
+    "objectivesTitle": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam",
+    "courseOverview": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam"
+  }
+}

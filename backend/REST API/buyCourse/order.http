@@ -1,0 +1,26 @@
+
+
+
+# get all Order
+#   Status Code:
+#    200 => OK
+#   
+###
+GET {{host}}/api/order/all
+
+# Get Order by order id
+#   Status Code:
+#    200 => OK
+#    404 =>  { error: "Order not found." }
+###
+GET {{host}}/api/order/65984554865800cea0838bf2
+
+
+# Delete Order
+#   Status Code:
+#    200 => OK
+#    404 =>  { error: "Order not found." }
+###
+DELETE {{host}}/api/order/delete/65984554865800cea0838bf2
+
+

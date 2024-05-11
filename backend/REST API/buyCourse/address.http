@@ -1,0 +1,27 @@
+
+
+# Get User Address
+#  Status Code:
+#     200 => OK
+#     404 => response => { error: "User not found." } 
+#     404 => response => { error: "Address not found for the user." }
+###
+GET {{host}}/api/address/get-address
+
+# Add Or Update Address
+#  Status Code:
+#     200 => OK
+#     404 => response => { error: "User not found." } 
+###
+POST {{host}}/api/address/add-or-update-address
+Content-Type: application/json
+
+{
+
+  "addressLine1": "1255 NY Street 8",
+  "addressLine2": "apt No 6",
+  "city": "New York",
+  "state": "New york",
+  "postalCode": "12345",
+  "country": "United State"
+}

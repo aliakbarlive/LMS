@@ -1,0 +1,16 @@
+
+
+# Get Checkout Detail for checkout Page
+#   Status Code:
+#    200 => OK
+#    400 => { error: 'Cart is empty. Add items to the cart before checkout.' }
+###
+GET {{host}}/api/checkout/checkout-details
+
+
+# Place Order from Checkout Page
+#   Status Code:
+#    200 => OK
+#    400 => { error: 'Cart is empty. Add items to the cart before checkout.' }
+###
+GET {{host}}/api/checkout/place-order

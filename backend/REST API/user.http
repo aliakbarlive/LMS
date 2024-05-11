@@ -1,0 +1,3 @@
+### Get User Profile
+Get http://localhost:5000/api/users/profile
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTY0NmYzMTI1MTc1Njc5MzRmYjQ5YWEiLCJpYXQiOjE3MDEwODExMTgsImV4cCI6MTcwMTY4NTkxOH0.MSczbhjW0RdWK_8j7a4fOFf8u72_yrcBhC2RZgIuDso

@@ -1,0 +1,40 @@
+@articleId =65b1216bfebf5d4b47247523
+@categoryId =65b0ca38d6ade8af170659d8
+
+### Get Article by ID
+GET {{host}}/api/articles/{{articleId}}
+
+### Get Other Articles List for a Given Article ID
+GET {{host}}/api/articles/{{articleId}}/others
+
+### Create Article
+POST {{host}}/api/articles
+Content-Type: application/json
+Authorization: {{token}}
+
+{
+  "title": "04 Sample Article Five",
+  "content": "This is a sample article content Five.",
+  "category": "65b0ca38d6ade8af170659d8",
+  "metaTitle":"sample",
+  "metaDescription":"sample Meta Description",
+  "coverImage":"https://themetrust.com/wp-content/uploads/2018/06/blog-resource-cover-1000x500.jpg"
+}
+
+### Update Article by ID
+PUT {{host}}/api/articles/{{articleId}}
+Content-Type: application/json
+
+{
+  "title": "Updated Article Title",
+  "content": "This is the updated content of the article."
+}
+
+### Delete Article by ID
+DELETE {{host}}/api/articles/{{articleId}}
+
+### Get All Articles
+GET {{host}}/api/articles
+
+### Get Articles by Category ID
+GET {{host}}/api/articles/category/{{categoryId}}

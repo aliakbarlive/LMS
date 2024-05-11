@@ -1,0 +1,147 @@
+# Register User
+###
+POST {{host}}/api/auth/register
+Content-Type: application/json
+
+{
+    "name":"user",
+    "user_type":"student",
+    "email":"testing@gmail.com",
+    "password":"password",
+    "cell_phone":"test_cellPhone"
+}
+
+# Verify Email
+###
+GET {{host}}/api/auth/verify-email?token=2f8767e4fc43ce83a73a0391a2cdbe77
+
+# Login User
+###
+POST {{host}}/api/auth/login
+Content-Type: application/json
+
+{
+    "email":"testing@gmail.com", 
+    "password":"password" 
+}
+
+# create user
+###
+POST {{host}}/api/auth/create
+Content-Type: application/json
+
+{
+    "name":"Testing 101",
+    "email":"test10@gmail.com"
+}
+# updated user
+###
+PATCH {{host}}/api/auth/update/:userId
+Content-Type: multipart/formdata
+
+const formdata = new FormData();
+formdata.append("profilePic", fileInput.files[0], "/C:/Users/ADMIN/Pictures/2021-01-12T17-46-42.299Z-pexels-lisa-fotios-1279330.jpg");
+formdata.append("firstName", "ali");
+formdata.append("lastName", "ahmed");
+formdata.append("userName", "alidev23");
+formdata.append("role", "manager");
+
+const requestOptions = {
+  method: "PATCH",
+  headers: myHeaders,
+  body: formdata,
+  redirect: "follow"
+};
+
+response: {
+    "status": true,
+    "msg": "user updated successfully!",
+    "user": {
+        "_id": "661d770970b6e0bc65c84a01",
+        "userName": "alidev23",
+        "email": "ali3@gmail.com",
+        "firstName": "ali",
+        "lastName": "ahmed",
+        "profilePic": "",
+        "is_verified": true,
+        "role": "manager",
+        "createdAt": "2024-04-15T18:50:49.532Z",
+        "updatedAt": "2024-04-22T18:03:31.331Z"
+    }
+}
+
+
+# Google Login
+###
+POST {{host}}/api/auth/google-login
+Content-Type: application/json
+
+{
+    "name":"Testing 101adfs1",
+    "email":"test10@gmail.com"
+}
+
+# Apple Register
+###
+POST {{host}}/api/auth/apple-register
+Content-Type: application/json
+
+{
+    "id_token":"Hello",
+    "user_type":"hello"
+}
+
+# Apple Login
+###
+POST {{host}}/api/auth/apple-login
+Content-Type: application/json
+
+{
+    "id_token":"Hello"
+}
+
+
+# Forgot Password
+###
+POST {{host}}/api/auth/forgot-password
+Content-Type: application/json
+
+{
+    "email":"test@gmail.com"
+}
+
+# Verify reset password token
+###
+Get {{host}}/api/auth/password-email-verify?token=633fcc9725093911151b04d58d9d59cfb405d9778fc76723b3f889e409e39873
+
+# Reset Password
+###
+POST {{host}}/api/auth/reset-password
+Content-Type: application/json
+
+{
+    "token":"633fcc9725093911151b04d58d9d59cfb405d9778fc76723b3f889e409e39873",
+    "password":"password2"
+}
+
+
+
+# Google Login
+###
+POST {{host}}/api/auth/google-auth-login
+Content-Type: application/json
+
+{
+    "access_token":"ya29.a0AfB_byBYpLDr-HJ4ldjyu8eoy3YyuHShn6UyOEXZlfDukAmkNYvk5pslNoYHi4UbG5ehBGQiClDMlaeOVAbZ6T7m_1xknmW9BWAIwZ1gIJt2fNS6d_9_jgBHCgZelSY65QoZ_SJmrXskCw9GrwUOkAJ7eory5wuJz2caCgYKAbQSARASFQHGX2Mirv0kaBIDM7GXYepruZbxHw0170"
+}
+
+
+
+# Google Login
+###
+POST {{host}}/api/auth/google-auth-register
+Content-Type: application/json
+
+{
+    "access_token":"ya29.a0AfB_byAMN36VJXbmmxIsTO2SoZEZ_DSzVjaRTq5wYuvPdWESq5glTR8fP8lcxd68e0sjQuCnDm99_pTg6V_EwecJlIyeKGScr-jVsNBNpx3yffnJA5pGVYHorViEzF6h_Pu4pEgMGR8qy0owJbysJIjlE7f1SxpbQ5MaCgYKAaoSARASFQHGX2MiEQPkutpercEtHncLRSYe9g0170"
+}
