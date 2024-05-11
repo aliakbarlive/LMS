@@ -1,0 +1,10 @@
+{
+    "rest-client.environmentVariables": {
+
+        "$shared": {},
+        "local env":{
+            "host":"http://localhost:5151",
+            "token":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NTk1ODg1ZDVlMmZlYzE0OGQyZmM5NTYiLCJpYXQiOjE3MDYwODU4MDQsImV4cCI6MTcwNjY5MDYwNH0.MgOLD_1rdf-tVYDP7ksBvMDLTCIGjgnn5QV1kcYaUyU"
+        }
+    }
+}
